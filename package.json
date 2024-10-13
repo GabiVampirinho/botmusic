@@ -1,0 +1,73 @@
+{
+  "name": "Sonoplasta",
+  "version": "0.0.0-semantically-released",
+  "description": "Sonoplasta Oficial da Televerso Studios",
+  "main": "dist/index.js",
+  "keywords": [],
+  "author": "Gabriel Abravanel",
+  "license": "MIT",
+  "engines": {
+    "node": ">=10",
+    "npm": ">=6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kentcdodds/kcd-discord-bot"
+  },
+  "bugs": {
+    "url": "https://github.com/kentcdodds/kcd-discord-bot/issues"
+  },
+  "homepage": "https://github.com/kentcdodds/kcd-discord-bot#readme",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "start": "node .",
+    "build": "node ./other/generate-build-info.js",
+    "lint": "kcd-scripts lint",
+    "dev": "nodemon ./src/example.js",
+    "setup": "npm install && npm run validate -s",
+    "test": "kcd-scripts test",
+    "test:update": "npm test -- --updateSnapshot --coverage",
+    "validate": "kcd-scripts validate"
+  },
+  "dependencies": {
+    "discord.js": "12.3.1",
+    "dotenv": "^8.2.0",
+    "got": "^11.7.0",
+    "leven": "^3.1.0",
+    "match-sorter": "^5.0.0",
+    "md5-hash": "^1.0.1",
+    "open-graph-scraper": "^4.6.0",
+    "p-memoize": "^4.0.1",
+    "redent": "^3.0.0",
+    "rollbar": "^2.19.4",
+    "set-interval-async": "^1.0.33"
+  },
+  "devDependencies": {
+    "kcd-scripts": "^6.6.0",
+    "msw": "^0.21.3"
+  },
+  "eslintConfig": {
+    "extends": "./node_modules/kcd-scripts/eslint.js",
+    "rules": {
+      "babel/camelcase": "off",
+      "no-console": "off",
+      "consistent-return": "off",
+      "require-await": "off",
+      "max-statements": [
+        "error",
+        150
+      ],
+      "complexity": [
+        "error",
+        20
+      ]
+    }
+  },
+  "eslintIgnore": [
+    "node_modules",
+    "coverage",
+    "dist"
+  ]
+}
