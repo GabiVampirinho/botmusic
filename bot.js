@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const client = new Discord.Client();//conexão com o cliente e as outras são todas requisições de libs/api
+const client = new Discord.Client(1294828604001226814);//conexão com o cliente e as outras são todas requisições de libs/api
 const config = require('./config.json');
 const fs = require('fs');
 //criando um novo Mapa de chave/valor
@@ -8,8 +8,8 @@ const map = new Map();
 
 //Evento da inicialização. Esse evento é importante, mesmo que não haja nada dentro, ele é necessário para que o bot seja inicializado
 client.on("ready",() =>{
-    console.log("Gig online!");
-    client.user.setPresence({ game: { name: 'Uma rave no Discord!', type: 1, url: 'https://www.twitch.tv/killuabr_'} });
+    console.log("Sonoplasta online!");
+    client.user.setPresence({ game: { name: 'Uma rave no Discord!', type: 1, url: 'https://www.youtube.com/onnigumo'} });
     //0 = Jogando
     //  1 = Transmitindo
     //  2 = Ouvindo
